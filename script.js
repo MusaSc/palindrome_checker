@@ -4,14 +4,18 @@
 //all variables
 const inputField = document.getElementById("text-input");
 const result = document.getElementById("result");
+const form = document.getElementById("palindromeForm");
+
+form.addEventListener("submit", event => {event.preventDefault()});
 
 //the function to reverse the input
-const reverseWord = (word) => {  
+function reverseWord(word) {
   return word.split("").reverse().join("");
-};
+}
 
 //check logic
 document.getElementById("check-btn").addEventListener("click", function() {
+
   if (!inputField.value) {
     alert("Please input a value")
   } else {
